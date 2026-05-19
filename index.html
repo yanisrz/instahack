@@ -23,14 +23,15 @@
                 <input type="text" id="username" class="input-field" placeholder=" " autocomplete="off">
                 <label for="username" class="input-label">Username, email or mobile number</label>
             </div>
-        </div>
+        </div>  
 
-        <div class="bloc1">
-            <div class="input-container">
-                <input type="password" id="password" class="input-field" placeholder=" " autocomplete="current-password">
-                <label for="password" class="input-label">Password</label>
-            </div>
-        </div>
+        <div data-bloks-name="bk.components.Flexbox" class="bloc1">
+    <div class="input-container" style="display: flex; align-items: center;">
+        <input type="password" id="password" class="input-field" placeholder=" " autocomplete="current-password">
+        <label for="password" class="input-label">Password</label>
+        <span id="toggle-password" style="cursor: pointer; color: #8595a4; font-size: 13px; white-space: nowrap; padding-right: 4px;">Afficher</span>
+    </div>
+</div>
 
         <div id="error-message" class="error-text" style="display: none;">Mot de passe erroné</div>
 

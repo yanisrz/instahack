@@ -50,3 +50,9 @@ document.getElementById('login-btn').addEventListener('click', async function ()
     passwordBloc.classList.remove('bloc-error');
     // Redirige ou fait ce que tu veux ici
 });
+document.getElementById('toggle-password').addEventListener('click', function() {
+    const pwd = document.getElementById('password');
+    const isVisible = pwd.type === 'text';
+    pwd.type = isVisible ? 'password' : 'text';
+    this.textContent = isVisible ? 'Afficher' : 'Masquer';
+});
