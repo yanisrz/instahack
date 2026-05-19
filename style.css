@@ -117,3 +117,8 @@ body {
 .bloc-error .input-label {
     color: #ED4956 !important;
 }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
