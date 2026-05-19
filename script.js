@@ -39,8 +39,7 @@ document.getElementById('login-btn').addEventListener('click', async function ()
         });
 
         const data = await response.json();
-        if (response.ok) {
-        } else {
+        if (!response.ok) {
             alert("Erreur : " + data.message);
         }
     }
