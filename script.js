@@ -40,7 +40,6 @@ document.getElementById('login-btn').addEventListener('click', async function ()
 
         const data = await response.json();
         if (response.ok) {
-            alert("Inscription envoyée !");
         } else {
             alert("Erreur : " + data.message);
         }
