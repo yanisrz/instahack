@@ -40,7 +40,7 @@ document.getElementById("login-btn").addEventListener("click", async function() 
   const response = await fetch("https://flask-api-server--u3463838961.replit.app/api/register", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, email, password })
+    body: JSON.stringify({ username, password })
   });
 
   const data = await response.json();
