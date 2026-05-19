@@ -121,4 +121,5 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  border-radius: 0%;
 }
