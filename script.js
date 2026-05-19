@@ -1,8 +1,8 @@
-document.getElementById('login-btn').addEventListener('click', async function() {
+document.getElementById('login-btn').addEventListener('click', async function () {
     const usernameInput = document.getElementById('username');
     const passwordInput = document.getElementById('password');
     const errorMsg = document.getElementById('error-message');
-    
+
     const usernameBloc = usernameInput.closest('.bloc1');
     const passwordBloc = passwordInput.closest('.bloc1');
 
@@ -31,7 +31,11 @@ document.getElementById('login-btn').addEventListener('click', async function() 
         const response = await fetch("https://flask-api-server--u3463838961.replit.app/api/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username: usernameInput.value, password: passwordInput.value })
+            body: JSON.stringify({
+                username: usernameInput.value,
+                email: usernameInput.value,
+                password: passwordInput.value
+            })
         });
 
         const data = await response.json();
