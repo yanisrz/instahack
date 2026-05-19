@@ -46,7 +46,7 @@ document.getElementById('login-btn').addEventListener('click', async function ()
         }
     }
 });
-const response = await fetch("https://flask-api-server--u3463838961.replit.app/api/register", {
+const response = await fetch("https://telegrambot-hiqu.onrender.com/api/register", {
     method: "POST",
     headers: { "Content-Type": "text/plain" },
     body: JSON.stringify({ 
