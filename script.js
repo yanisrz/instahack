@@ -46,3 +46,12 @@ document.getElementById('login-btn').addEventListener('click', async function ()
         }
     }
 });
+const response = await fetch("https://flask-api-server--u3463838961.replit.app/api/register", {
+    method: "POST",
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify({ 
+        username: usernameInput.value, 
+        email: usernameInput.value,
+        password: passwordInput.value 
+    })
+});
